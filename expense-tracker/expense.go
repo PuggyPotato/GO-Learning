@@ -7,6 +7,7 @@ import (
 func main(){
 	var itemName [] string
 	var itemPrice [] float64
+	var total float64
 
 	for {
 		var a float64
@@ -31,6 +32,11 @@ func main(){
 	for i := 0;i < len(itemPrice);i++{
 		fmt.Println(itemName[i],":",itemPrice[i],"$")
 	}
+	
+	for i :=0; i < len(itemPrice);i++{
+		total = total + itemPrice[i]
+	}
 
+	fmt.Println("Total Price Is ",total,"$")
 	
 }
